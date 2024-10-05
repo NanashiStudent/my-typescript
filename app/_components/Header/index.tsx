@@ -1,19 +1,35 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./index.module.css";
+import Menu from "../Menu";
 
 export default function Header() {
   return (
     <header className={styles.header}>
-      <a href="/" className={styles.logoLink}>
+      <Link href="/" className={styles.logoLink}>
         <Image
           src="/logo.svg"
-          alt="dfjlasgjal;gjkfsal;gjkase"
+          alt="ヘッダーのロゴ"
           className={styles.logo}
           width={348}
           height={133}
           priority
         />
-      </a>
+      </Link>
+      <Menu />
+      {/* <nav>
+        <ul className={styles.items}>
+          <li>
+            <Link href="/news">ニュース一覧</Link>
+          </li>
+          <li>
+            <Link href="/members">メンバー</Link>
+          </li>
+          <li>
+            <Link href="/contact">問い合わせ先</Link>
+          </li>
+        </ul>
+      </nav> */}
     </header>
   );
 }
