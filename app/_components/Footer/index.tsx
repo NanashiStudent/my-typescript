@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./index.module.css";
 
 export default function Footer() {
@@ -7,13 +8,13 @@ export default function Footer() {
       <nav className={styles.nav}>
         <ul className={styles.items}>
           <li className={styles.item}>
-            <a href="/news">ニュースで～す</a>
+            <Link href="/news">ニュース</Link>
           </li>
           <li className={styles.item}>
-            <a href="/members">What&apos;s クチャラーデート?</a>
+            <Link href="/members">メンバー</Link>
           </li>
           <li className={styles.item}>
-            <a href="/contact">問い合わせ先で～す</a>
+            <Link href="/contact">問い合わせ先</Link>
           </li>
         </ul>
       </nav>
