@@ -4,8 +4,6 @@ import Article from "@/app/_components/Article";
 import ButtonLink from "@/app/_components/ButtonLink";
 import { notFound } from "next/navigation";
 
-export const revalidate = 60;
-
 type Props = {
   params: {
     slug: string;
