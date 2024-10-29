@@ -35,14 +35,19 @@ export default function NewsList({ news }: Props) {
                 height={630}
               />
             )}
-            <dl className={styles.content}>
-              <dt className={styles.title}>{article.title}</dt>
-              <dd className={styles.meta}>
-                <Category category={article.category} />
-                <Date date={article.createdAt ?? article.createdAt} />
-              </dd>
-            </dl>
           </Link>
+          <dl>
+            <dt className={styles.title}>{article.title}</dt>
+            <dd className={styles.meta}>
+              <Link
+                href={`/news/category/${article.category.id}`}
+                className={styles.categoryLink}
+              >
+                <Category category={article.category} />
+              </Link>
+              <Date date={article.createdAt ?? article.createdAt} />
+            </dd>
+          </dl>
         </li>
       ))}
     </ul>
